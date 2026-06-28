@@ -65,6 +65,11 @@ MoD introduces two independent routers:
 
 Their gate scores are combined with a sqrt-product strategy so that expert selection reflects joint agreement while avoiding over-suppression.
 
+
+### 3. Momentum Switching
+
+Token-level MoE routing can switch experts too frequently, fragmenting the reasoning trace. MoD uses a causal sliding-window routing state so nearby tokens share stable routing context while remaining autoregressive-friendly.
+
 ## Project Status
 
 Planned release items:
